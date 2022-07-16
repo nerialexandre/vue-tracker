@@ -29,9 +29,10 @@
 </div>
 </template>
 
-<script type="text/javascript">
+<script lang="ts">
 import { defineComponent } from "vue";
 import TemporizadorComponent from "./TemporizadorComponent.vue";
+import ITarefa from "../interfaces/ITarefa";
 
 export default defineComponent({
     name: "FormularioTracker",
@@ -44,11 +45,11 @@ export default defineComponent({
             playDisabled: false,
             interval: 0,
             timer: "00:00:00",
-            arrayTask: []
+            arrayTask: [] as ITarefa[]
         };
     },
     methods: {
-        finishedTask(tempoDecorrido) {
+        finishedTask(tempoDecorrido: string) {
             this.arrayTask.push({
                 name: this.taskName || "Tarefa sem nome",
                 time: tempoDecorrido
