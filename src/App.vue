@@ -3,9 +3,9 @@
     <div class="column is-one-quarter">
       <BarraLateral />
     </div>
-    <div class="column is-three-quarter">
-      <FormularioTracker />
-    </div>
+    <!-- <div class="column is-three-quarter"> -->
+      <router-view></router-view>
+    <!-- </div> -->
 
   </main>
 </template>
@@ -13,12 +13,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
-import FormularioTracker from './components/FormularioTracker.vue';
-
 
 export default defineComponent({
     name: "App",
-    components: { BarraLateral, FormularioTracker }
+    components: { BarraLateral }
 });
 </script>
 
