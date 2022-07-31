@@ -1,7 +1,9 @@
 <template>
   <header>
     <h1>
-      <img src="../assets/logo.png" alt="">
+      <img @click="teste"
+           src="../assets/logo.png"
+           alt="">
     </h1>
   </header>
 </template>
@@ -9,8 +11,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'BarraLateral'
+  name: 'BarraLateral',
+ 
+
+
 })
+
+
 </script>
 
 
@@ -22,11 +29,11 @@ header {
   width: 100%;
   height: 100vh;
 }
+
 @media only screen and (max-width: 768px) {
   header {
     padding: 2.5rem;
     height: auto;
   }
 }
-
 </style>
